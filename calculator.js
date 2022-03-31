@@ -31,14 +31,17 @@ var App = {
     computeProduct() {
       this.product = Number(this.number3) * Number(this.number4);
       this.saved_number = this.product;
+      this.calculations.push(this.product);
     },
     computeDifference() {
       this.difference = Number(this.number5) - Number(this.number6);
       this.saved_number = this.difference;
+      this.calculations.push(this.difference);
     },
     computeQuotient() {
       this.quotient = Number(this.number7) / Number(this.number8);
       this.saved_number = this.quotient;
+      this.calculations.push(this.quotient);
     },
   },
 };

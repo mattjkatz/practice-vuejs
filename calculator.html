@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="calculator.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    {{ message }}
+    <div>
+      <h2>Result: {{ saved_number }}</h2>
+    </div>
+    <div>
+      {{ addition_message }}
+      <div>1st number: <input v-model="number1" type="number"></div>
+      <div>2nd number: <input v-model="number2" type="number"></div>
+      <div><button v-on:click="computeSum()">Compute sum</button></div>
+      <p>The sum is: {{ sum }}</p>
+    </div>
+    <div>
+      {{ multiplication_message }}
+      <div>1st number: <input v-model="number3" type="number"></div>
+      <div>2nd number: <input v-model="number4" type="number"></div>
+      <div><button v-on:click="computeProduct()">Compute product</button></div>
+      <p>The product is: {{ product }}</p>
+    </div>
+    <div>
+      {{ subtraction_message }}
+      <div>1st number: <input v-model="number5" type="number"></div>
+      <div>2nd number: <input v-model="number6" type="number"></div>
+      <div><button v-on:click="computeDifference()">Compute difference</button></div>
+      <p>The difference is: {{ difference }}</p>
+    </div>
+    <div>
+      {{ division_message }}
+      <div>1st number: <input v-model="number7" type="number"></div>
+      <div>2nd number: <input v-model="number8" type="number"></div>
+      <div><button v-on:click="computeQuotient()">Compute quotient</button></div>
+      <p>The quotient is: {{ quotient }}</p>
+    </div>
+    <div>
+      <h3>history: </h3>
+      <li v-for="calculation in calculations">{{ calculation }}</li>
+    </div>
+  </div>
+</body>
+</html>

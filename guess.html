@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Intro</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Guess a number!</h1>
+    <h3>{{ guessResponse }}</h3>
+    <img src="" alt="response image">
+    <div>
+      <input type="text" v-model="userGuess">
+      <button v-on:click="checkGuess">Submit</button>
+      <button>Play again</button>
+    </div>
+    <div></div>
+  </div>
+  <script src="guess.js"></script>
+</body>
+</html>
